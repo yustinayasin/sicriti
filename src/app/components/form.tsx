@@ -1,4 +1,4 @@
-// import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
+'use client'
 
 export default function Form() {
   return (

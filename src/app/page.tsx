@@ -1,13 +1,13 @@
-// import Home from './pages/home'
-// import Dashboard from './pages/dashboard'
-import Login from './pages/login'
+import Form from "./components/form";
+import Layout from "./components/layout";
+import Title from "./components/title";
 
 export default function Page() {
-  return (
-      <>
-        {/* <Home/> */}
-        {/* <Dashboard /> */}
-        <Login />
-      </>
-  )
+    return (
+      <Layout headings="Home" isLogin={true}>
+          <Title/>
+          <Form/> 
+      </Layout>
+    )
 }
+

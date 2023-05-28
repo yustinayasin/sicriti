@@ -1,8 +1,6 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
-export default function Navbar({ headings }: {headings:string}) {
+export default function Navbar({ headings, isLogin }: { headings:string, isLogin: Boolean }) {
   return (
     <div className="navbar bg-base-100 py-4 px-8">
       <div className="navbar-start">
@@ -10,7 +8,7 @@ export default function Navbar({ headings }: {headings:string}) {
       </div>
 
       <div className="navbar-end">
-        <a className="btn px-6">Login</a>
+        <Link href={!isLogin ? '/' : '/login'} className="btn px-6">{!isLogin ? 'Home' : 'Login'}</Link>
       </div>
   </div>
   )
